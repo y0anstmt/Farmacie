@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<TabPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="org.example.issfarmacielab3.PharmacyController">
+
+    <!-- Orders Tab -->
+    <Tab text="Orders">
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Label text="Orders" style="-fx-font-weight: bold; -fx-font-size: 14;"/>
+            <HBox spacing="10">
+                <TextField fx:id="medicationField" promptText="Medication"/>
+                <TextField fx:id="quantityField" promptText="Quantity"/>
+                <Button text="Submit Order" onAction="#handleSubmitOrder"/>
+            </HBox>
+            <ListView fx:id="ordersListView" prefHeight="200"/>
+            <Label fx:id="orderDetailsLabel" text="Selected Order: None"/>
+            <Button text="Refresh Orders" onAction="#handleRefreshList"/>
+            <Button text="Fulfill Selected Order" onAction="#handleFulfillOrder"/>
+            <HBox alignment="CENTER" spacing="10">
+                <Button text="Exit the program" onAction="#handleExit"/>
+            </HBox>
+        </VBox>
+    </Tab>
+
+    <!-- History Tab -->
+    <Tab text="History">
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Label text="Order History" style="-fx-font-weight: bold; -fx-font-size: 14;"/>
+            <ListView fx:id="historyListView" prefHeight="300"/>
+            <Button text="Refresh History" onAction="#handleRefreshHistory"/>
+        </VBox>
+    </Tab>
+
+    <!-- View UI Tab -->
+    <Tab text="View UI">
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Label text="View UI Section" style="-fx-font-weight: bold; -fx-font-size: 14;"/>
+            <TextField fx:id="viewTextField" promptText="Enter medication name..."/>
+            <Button text="Search" onAction="#handleViewSubmit"/>
+            <Label fx:id="viewResultLabel" text=""/>
+        </VBox>
+    </Tab>
+
+    <!-- Info Tab -->
+    <Tab text="Info">
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Label text="Search Medications by Keyword" style="-fx-font-weight: bold; -fx-font-size: 14;"/>
+            <TextField fx:id="infoTextField" promptText="Enter keyword (e.g., inima)"/>
+            <Button text="Search" onAction="#handleLoadInfo"/>
+            <TextArea fx:id="infoTextArea" editable="false" prefHeight="200"/>
+        </VBox>
+    </Tab>
+</TabPane>

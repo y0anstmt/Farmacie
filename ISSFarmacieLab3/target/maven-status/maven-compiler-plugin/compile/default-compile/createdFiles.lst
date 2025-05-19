@@ -1,0 +1,15 @@
+ui\UI_Sectie.class
+model\OrderUI.class
+repo\Repository.class
+entitate\Medicament.class
+model\HistoryUI.class
+service\service.class
+module-info.class
+entitate\Sectie.class
+org\example\issfarmacielab3\PharmacyController.class
+entitate\Comanda.class
+ui\UI_Farmacie.class
+controller\SectieController.class
+org\example\issfarmacielab3\PharmacyApp.class
+model\ViewUI.class
+controller\FarmacieController.class
